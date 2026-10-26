@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101a2c">
+    <title>DriveEase | Premium Car Rentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">Drive<span>Ease</span></a>
+
+        <nav>
+            <a href="#home"><b>Home</b></a>
+            <a href="#booking"><b>Book a Car</b></a>
+            <a href="#payment"><b>Payment</b></a>
+        </nav>
+
+        <a href="#booking" class="nav-button">Reserve Now</a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR JOURNEY, ELEVATED</p>
+
+                <h1>Every journey<br>deserves a <span>better ride.</span></h1>
+
+                <p class="hero-description">
+                    Discover your perfect car, choose your schedule,
+                    and get ready to explore on your own terms.
+                </p>
+
+                <a href="#booking" class="primary-button">
+                    Explore Your Ride &rarr;
+                </a>
+
+                <div class="hero-features">
+                    <span>Flexible timings</span>
+                    <span>Transparent hourly rates</span>
+                </div>
+            </div>
+
+            <div class="hero-image" role="img"
+                 aria-label="Premium car parked on a scenic road">
+            </div>
+
+            <div class="hero-label">
+                <span class="status-dot"></span>
+                Find your next ride
+            </div>
+        </section>
+
+        <section class="booking-section" id="booking">
+            <div class="section-heading">
+                <p class="eyebrow">YOUR NEXT ADVENTURE STARTS HERE</p>
+                <h2>Book your ride.</h2>
+                <p>Choose a car and tell us about your journey.</p>
+            </div>
+
+            <form id="bookingForm">
+                <div class="booking-layout">
+
+                    <div class="booking-fields">
+
+                        <div class="field full-width">
+                            <label for="car">Choose your car</label>
+
+                            <select id="car" required>
+                                <option value="">Select a car</option>
+
+                                <option value="Maruti Suzuki Swift"
+                                    data-seats="4" data-price="500">
+                                    Maruti Suzuki Swift
+                                </option>
+
+                                <option value="Hyundai i20"
+                                    data-seats="4" data-price="600">
+                                    Hyundai i20
+                                </option>
+
+                                <option value="Tata Nexon"
+                                    data-seats="4" data-price="800">
+                                    Tata Nexon
+                                </option>
+
+                                <option value="Honda City"
+                                    data-seats="4" data-price="900">
+                                    Honda City
+                                </option>
+
+                                <option value="7-Seater SUV"
+                                    data-seats="7" data-price="1200">
+                                    7-Seater SUV
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="seats">Seating capacity</label>
+                            <input type="text" id="seats"
+                                   placeholder="Auto-filled" readonly>
+                        </div>
+
+                        <div class="field">
+                            <label for="price">Price per hour</label>
+                            <input type="text" id="price"
+                                   placeholder="Auto-filled" readonly>
+                        </div>
+
+                        <div class="field">
+                            <label for="pickupDate">Pickup date</label>
+                            <input type="date" id="pickupDate" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="pickupTime">Pickup time</label>
+                            <input type="time" id="pickupTime" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="returnDate">Return date</label>
+                            <input type="date" id="returnDate" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="returnTime">Return time</label>
+                            <input type="time" id="returnTime" required>
+                        </div>
+
+                        <div class="field full-width">
+                            <label for="from">Pickup location — From</label>
+                            <input type="text" id="from"
+                                   placeholder="Enter pickup address" required>
+                        </div>
+
+                        <div class="field full-width">
+                            <label for="to">Destination — To</label>
+                            <input type="text" id="to"
+                                   placeholder="Where are you going?" required>
+                        </div>
+
+                    </div>
+
+                    <aside class="summary-card">
+                        <p class="eyebrow">YOUR RESERVATION</p>
+                        <h3>Trip summary</h3>
+
+                        <div class="summary-row">
+                            <span>Selected car</span>
+                            <strong id="summaryCar">Not selected</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Seating</span>
+                            <strong id="summarySeats">—</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Hourly rate</span>
+                            <strong id="summaryRate">—</strong>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Rental duration</span>
+                            <strong id="duration">—</strong>
+                        </div>
+
+                        <div class="summary-total">
+                            <span>Estimated total</span>
+                            <strong id="totalPrice">₹0</strong>
+                        </div>
+
+                        <p class="summary-note">
+                            Final charges may vary. Payment is not yet enabled.
+                        </p>
+                    </aside>
+
+                </div>
+
+                <section class="payment-section" id="payment">
+                    <div class="payment-icon">&#8377;</div>
+
+                    <div>
+                        <h3>Payment</h3>
+                        <p>
+                            Your payment options will appear here
+                            when payment functionality is added.
+                        </p>
+                    </div>
+
+                    <span class="coming-soon">Coming soon</span>
+                </section>
+
+                <button type="submit" class="submit-button">
+                    Confirm Booking Request &rarr;
+                </button>
+
+                <p class="form-disclaimer">
+                    Submitting this form displays your booking summary.
+                    It does not create a saved reservation or process payment.
+                </p>
+
+                <section id="result" aria-live="polite"></section>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#home" class="logo">Drive<span>Ease</span></a>
+        <p>Every journey begins with the right ride.</p>
+        <p class="copyright">&copy; 2026 DriveEase. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
